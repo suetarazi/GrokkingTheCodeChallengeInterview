@@ -2,14 +2,14 @@
 
 namespace MaximumSumSubarrayOfSizeK
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
         }
 
-        public static int findMaxSumSubArray(int k, int[] arr)
+        public int findMaxSumSubArray(int k, int[] arr)
         {
 
             int maxSum = 0;
@@ -27,7 +27,7 @@ namespace MaximumSumSubarrayOfSizeK
             return maxSum;
         }
 
-        public static int findMaxSumSubArrayOptimized(int k, int[] arr)
+        public int findMaxSumSubArrayOptimized(int k, int[] arr)
         {
             int maxSum = 0;
 
