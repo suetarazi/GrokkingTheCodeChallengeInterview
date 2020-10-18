@@ -2,14 +2,14 @@
 
 namespace SmallestSubarrayWithAGivenSum
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
         }
 
-        public static int findMinSubArray(int S, int[] arr)
+        public int findMinSubArray(int S, int[] arr)
         {
             // TODO: Write your code here
             return -1;
