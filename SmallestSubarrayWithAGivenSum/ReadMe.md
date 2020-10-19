@@ -15,3 +15,13 @@ Given an array of positive numbers and a positive number ‘S’, find the length of
 5. Two steps are necessary for each window shrink:
    * Check if the current window length is the smallest so far, and if so, remember its length.
    * Subtract the first element of the window from the running sum to shrink the sliding window.
+
+## Big O: 
+
+### Time Complexity:
+
+O(n). Outer loop runs for all elements and inner while loop processes each element only once.
+
+### Space Complexity: 
+
+O(1)
