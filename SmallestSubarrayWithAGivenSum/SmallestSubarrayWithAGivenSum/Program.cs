@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.CompilerServices;
+using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace SmallestSubarrayWithAGivenSum
 {
@@ -14,19 +16,35 @@ namespace SmallestSubarrayWithAGivenSum
             int minSum = 0;
             int windowSum = 0;
             int windowStart = 0;
+            int minLength = Int32.MaxValue;
 
             for(int windowEnd = 0; windowEnd < arr.Length; windowEnd++)
             {
+                //cue up the window
                 windowSum += arr[windowEnd];
+                
+                //keep cueing up the window until windowSum >= S
+                while(windowSum >= S)
+                {
+                    //remember this length and set it to minLength
+                    minLength = Math.Min(minLength, windowEnd - windowStart + 1);
+                    //substract out the element at the start of the window
+                    windowSum -= arr[windowStart]; 
+                    //slide the window ahead
+                    windowStart++;
+                }
+
             }
-            if(windowSum <= S)
+
+        if(minLength == Int32.MaxValue)
             {
-                minSum = Math.Min(minSum, windowSum);
-
-
+                return 0;
             }
-            
-            return 0;
+
+            return minLength;
+
+            //can also write a Ternary like this:
+            //return minLength == Int32.MaxValue ? 0 : minLength;
         }
     }
 }

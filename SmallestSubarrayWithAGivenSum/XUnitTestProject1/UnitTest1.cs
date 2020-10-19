@@ -17,6 +17,7 @@ namespace XUnitTestProject1
             Assert.Equal(expected, actual);
         }
 
+        [Fact]
         public void Test2()
         {
             int[] TestInput = new int[] { 2, 1, 5, 2, 8 };
@@ -27,6 +28,7 @@ namespace XUnitTestProject1
             Assert.Equal(expected, actual);
         }
 
+        [Fact]
         public void Test3()
         {
             int[] TestInput = new int[] { 3, 4, 1, 1, 6 };
