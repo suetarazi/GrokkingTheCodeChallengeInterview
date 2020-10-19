@@ -1,4 +1,4 @@
-# GrokkingTheCodeChallengeInterview
+# Grokking The Code Challenge Interview
 
 ## Sliding Windows
 1. Maximum Sum Subarray of Size K
