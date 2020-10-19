@@ -11,7 +11,7 @@ namespace LongestSubstringWithKDistinctCharacters
 
         public int findLength(String str, int k)
         {
-            // TODO: Write your code here
+            string test = "test";
             return -1;
         }
 
