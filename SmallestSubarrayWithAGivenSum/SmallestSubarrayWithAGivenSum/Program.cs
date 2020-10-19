@@ -11,8 +11,22 @@ namespace SmallestSubarrayWithAGivenSum
 
         public int findMinSubArray(int S, int[] arr)
         {
-            // TODO: Write your code here
-            return -1;
+            int minSum = 0;
+            int windowSum = 0;
+            int windowStart = 0;
+
+            for(int windowEnd = 0; windowEnd < arr.Length; windowEnd++)
+            {
+                windowSum += arr[windowEnd];
+            }
+            if(windowSum <= S)
+            {
+                minSum = Math.Min(minSum, windowSum);
+
+
+            }
+            
+            return 0;
         }
     }
 }
