@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30503.244
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LongestSubstringWithKDistinctCharacters", "LongestSubstringWithKDistinctCharacters\LongestSubstringWithKDistinctCharacters.csproj", "{18602C0F-ABDF-4A3F-AB67-3E7727C8B144}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XUnitTestProject1", "XUnitTestProject1\XUnitTestProject1.csproj", "{F3955448-54C5-4A90-9D5B-1379070FC4F2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{18602C0F-ABDF-4A3F-AB67-3E7727C8B144}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18602C0F-ABDF-4A3F-AB67-3E7727C8B144}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18602C0F-ABDF-4A3F-AB67-3E7727C8B144}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3955448-54C5-4A90-9D5B-1379070FC4F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3955448-54C5-4A90-9D5B-1379070FC4F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3955448-54C5-4A90-9D5B-1379070FC4F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3955448-54C5-4A90-9D5B-1379070FC4F2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
