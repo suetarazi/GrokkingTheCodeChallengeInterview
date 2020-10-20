@@ -21,8 +21,8 @@ namespace LongestSubstringWithKDistinctCharacters
             }
 
             int windowStart = 0;
-            int maxSubstring = Int32.MinValue;
-            Dictionary<char, int> hashmap = new Dictionary<char, int>();
+            int maxSubstring = 0;
+            Dictionary<char, int> charFrequency = new Dictionary<char, int>();
 
             //in this loop, we try and extend the width of the window [windowStart, windowEnd]            
             for(int windowEnd = 0; windowEnd < str.Length; windowEnd++)
@@ -30,22 +30,29 @@ namespace LongestSubstringWithKDistinctCharacters
 
                 char rightChar = str[windowEnd];
 
-                hashmap.Add(rightChar, hashmap.TryGetValue(rightChar) + 1);
+                if(!(charFrequency.ContainsKey(rightChar)))
+                {
+                    charFrequency[rightChar] = 0;
+                }
+                charFrequency[rightChar] += 1;
+
+                //Now try and shrink the sliding window until we have k distinct characters in the character frequency
                 
-                while(hashmap.Count > k)
+                while(charFrequency.Count > k)
                 {
                     char leftChar = str[windowStart];
 
-                    hashmap.Add(leftChar, hashmap[leftChar] -1;   
+                    charFrequency.Add(leftChar, charFrequency[leftChar]-1);   
                     
-                    if(hashmap.TryGetValue(leftChar) == 0)
+                    if(charFrequency[leftChar] == 0)
                     {
-                        hashmap.Remove(leftChar);
+                        charFrequency.Remove(leftChar);
                     }
                     windowStart++;
                 }
 
-                maxSubstring = Math.Max(maxSubstring, windowEnd - windowStart + 1);
+                //window size is windowEnd - windowStart +1
+                maxSubstring = Math.Max(windowStart, windowEnd - windowStart + 1);
             }
 
             return maxSubstring;
