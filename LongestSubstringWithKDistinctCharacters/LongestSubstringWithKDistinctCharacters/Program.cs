@@ -29,20 +29,29 @@ namespace LongestSubstringWithKDistinctCharacters
             {
 
                 char rightChar = str[windowEnd];
+                
+                //charFrequency.TryAdd(rightChar, charFrequency.GetValueOrDefault(rightChar, 0) + 1);
 
-                if(!(charFrequency.ContainsKey(rightChar)))
+                if (!(charFrequency.ContainsKey(rightChar)))
                 {
                     charFrequency[rightChar] = 0;
+
                 }
                 charFrequency[rightChar] += 1;
 
                 //Now try and shrink the sliding window until we have k distinct characters in the character frequency
-                
-                while(charFrequency.Count > k)
+
+                while (charFrequency.Count > k)
                 {
                     char leftChar = str[windowStart];
+                    
+                    charFrequency[leftChar] -= 1;
 
-                    charFrequency.Add(leftChar, charFrequency[leftChar]-1);   
+                        //if (charFrequency.ContainsKey(leftChar))
+                        //{
+                        //}
+                        //charFrequency[leftChar] = 0;
+                    
                     
                     if(charFrequency[leftChar] == 0)
                     {
