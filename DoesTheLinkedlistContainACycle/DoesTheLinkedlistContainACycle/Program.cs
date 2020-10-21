@@ -50,5 +50,35 @@ namespace DoesTheLinkedlistContainACycle
             }
                 return false;
         }
+
+
+        /// <summary>
+        /// Provided solution in InterviewCake. BigO: O(n) for time and O(1) for space
+        /// </summary>
+        /// <param name="firstNode">node</param>
+        /// <returns>true or false</returns>
+        public static bool ContainsCycle2(LinkedListNode firstNode)
+        {
+            //use two runners, one fast and one slow. Both start at the beginning of the linkedlist.
+            var slowRunner = firstNode;
+            var fastRunner = firstNode;
+
+            //go until we hit the end of the list
+            while(fastRunner != null && fastRunner.Next != null)
+            {
+                slowRunner = slowRunner.Next;
+                fastRunner = fastRunner.Next.Next;
+
+            }
+
+            //case: fastRunner is about to 'lap' slowRunner
+            if(fastRunner == slowRunner)
+            {
+                return true;
+            }
+
+            //case: fastRunner hit the end of the list
+            return false;
+        }
     }
 }
