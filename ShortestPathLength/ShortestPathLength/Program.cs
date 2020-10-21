@@ -42,6 +42,7 @@ namespace ShortestPathLength
 
                 steps++;
 
+            // check to see if End.id is in the subset of neighbors
                 foreach(Node nei in n.neighbors)
                 {
                     if(nei.id == end.id)
@@ -51,10 +52,7 @@ namespace ShortestPathLength
                 }
             }
             
-            // Create a set of nodes S' thar are reachable from S and have not yet been in any set
-            // Repeat until you reach end
-            // Return number of sets (+/-1?)
-
+            //return -1 if not found
             return -1;
 
         }
