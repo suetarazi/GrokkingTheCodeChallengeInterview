@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace FruitsIntoBaskets
 {
@@ -13,9 +14,42 @@ namespace FruitsIntoBaskets
 
         public int findLength(char[] arr)
         {
+            int windowStart = 0;
+            int maxSubstring = 1;
+
+            Dictionary<char, int> fruitMap = new Dictionary<char, int>();
+
+            //grow the window
+            for(int windowEnd = 0; windowEnd < arr.Length; windowEnd++)
+            {
+                char rightChar = arr[windowEnd];
+               
+                if(!fruitMap.ContainsKey(rightChar))
+                {
+                    fruitMap[rightChar] = 0;
+                }
+                fruitMap[rightChar] += 1;
+
+            //now we try and shrink the window, keeping two distinct characters in the fruitMap
+            while(fruitMap.Count > 2)
+                {
+                    char leftChar = arr[windowStart];
+
+                    fruitMap[leftChar] -= 1;
+
+                    if(fruitMap[leftChar] == 0)
+                        {
+                            fruitMap.Remove(leftChar);
+                        
+                        }
+
+                        windowStart++;
+                }
+            maxSubstring = Math.Max(maxSubstring, windowEnd - windowStart + 1);
+            }
 
 
-            return -1;
+            return maxSubstring;
         }
     }
 }
