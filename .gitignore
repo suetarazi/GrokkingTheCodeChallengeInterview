@@ -3,3 +3,22 @@
 ################################################################################
 
 /.vs
+/BreadthFirstGraphTraversal/BreadthFirstGraphTraversal/obj/Release/netcoreapp3.1
+/FruitsIntoBaskets/.vs/FruitsIntoBaskets
+/FruitsIntoBaskets/FruitsIntoBaskets/bin/Debug/netcoreapp3.1
+/FruitsIntoBaskets/FruitsIntoBaskets/obj/Debug/netcoreapp3.1
+/FruitsIntoBaskets/FruitsIntoBaskets/obj/Release/netcoreapp3.1
+/FruitsIntoBaskets/FruitsIntoBaskets/obj
+/FruitsIntoBaskets/XUnitTestProject1/bin/Debug/netcoreapp3.1/cs
+/FruitsIntoBaskets/XUnitTestProject1/bin/Debug/netcoreapp3.1
+/FruitsIntoBaskets/XUnitTestProject1/obj/Debug/netcoreapp3.1
+/FruitsIntoBaskets/XUnitTestProject1/obj/Release/netcoreapp3.1
+/FruitsIntoBaskets/XUnitTestProject1/obj
+/NoRepeatSubstring/.vs/NoRepeatSubstring/v16
+/NoRepeatSubstring/NoRepeatSubstring/obj/Debug/netcoreapp3.1
+/NoRepeatSubstring/NoRepeatSubstring/obj
+/ShortestPathLength/ShortestPathLength/obj/Debug/netcoreapp3.1
+*.cs
+/ShortestPathLength/ShortestPathLength/obj/Release/netcoreapp3.1/ShortestPathLength.AssemblyInfoInputs.cache
+/NoRepeatSubstring/XUnitTestProject1/obj/Debug/netcoreapp3.1
+/NoRepeatSubstring/XUnitTestProject1/obj
