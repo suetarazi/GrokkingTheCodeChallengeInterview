@@ -25,21 +25,11 @@ namespace NoRepeatSubstring
 
                 if(charList.Contains(rightChar))
                 {
-                    charList.Remove(rightChar);
+                    windowStart = rightChar;
                 }                
                 charList.Add(rightChar);
-                
-                while(charList.Count > 0)
-                {
-                    char leftChar = str[windowStart];
 
-                    if(charList.Contains(leftChar))
-                    {
-                        charList.Remove(leftChar);
-                    }
 
-                    windowStart++;
-                }
 
                 maxSubstring = Math.Max(maxSubstring, windowEnd - windowStart + 1);
             }
