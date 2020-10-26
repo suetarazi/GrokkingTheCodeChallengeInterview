@@ -24,7 +24,7 @@ namespace XUnitTestProject1
             int testDistinct = 1;
             Program p = new Program();
             int actual = p.findLength(testString, testDistinct);
-            int expected = 1;
+            int expected = 2;
             Assert.Equal(expected, actual);
         }
 

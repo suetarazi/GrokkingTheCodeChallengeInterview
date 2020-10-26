@@ -10,6 +10,12 @@ namespace LongestSubstringWithKDistinctCharacters
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+
+            string testString = "araaci";
+            int testDistinct = 1;
+            Program p = new Program();
+            int actual = p.findLength(testString, testDistinct);
+            Console.WriteLine($"Output: The output is {actual}");
         }
 
         public int findLength(String str, int k)
@@ -29,22 +35,25 @@ namespace LongestSubstringWithKDistinctCharacters
             {
 
                 char rightChar = str[windowEnd];
-                
-                //charFrequency.TryAdd(rightChar, charFrequency.GetValueOrDefault(rightChar, 0) + 1);
+                Console.WriteLine($"Line 28: initial rightChar in for loop {rightChar}");
+
+                //charFrequency[rightChar] += 1;
 
                 if (!(charFrequency.ContainsKey(rightChar)))
                 {
                     charFrequency[rightChar] = 0;
+                    Console.WriteLine($"Line 45: charFrequency of rightChar {charFrequency[rightChar]}");
 
                 }
                 charFrequency[rightChar] += 1;
+                Console.WriteLine($"Line 49: charFrequency of rightChar {charFrequency[rightChar]}");
 
                 //Now try and shrink the sliding window until we have k distinct characters in the character frequency
 
                 while (charFrequency.Count > k)
                 {
                     char leftChar = str[windowStart];
-                    
+                    Console.WriteLine($"Line 56: leftChar is {leftChar}");
                     charFrequency[leftChar] -= 1;
 
                         //if (charFrequency.ContainsKey(leftChar))
@@ -61,7 +70,8 @@ namespace LongestSubstringWithKDistinctCharacters
                 }
 
                 //window size is windowEnd - windowStart +1
-                maxSubstring = Math.Max(windowStart, windowEnd - windowStart + 1);
+                maxSubstring = Math.Max(maxSubstring, windowEnd - windowStart + 1);
+                
             }
 
             return maxSubstring;
