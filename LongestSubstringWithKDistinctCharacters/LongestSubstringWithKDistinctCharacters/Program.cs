@@ -11,6 +11,7 @@ namespace LongestSubstringWithKDistinctCharacters
         {
             Console.WriteLine("Hello World!");
 
+            //test 2 - last one that wasn't working
             string testString = "araaci";
             int testDistinct = 1;
             Program p = new Program();
