@@ -31,7 +31,7 @@ namespace NoRepeatSubstring
 
 
 
-                maxSubstring = Math.Max(maxSubstring, windowEnd - windowStart + 1);
+             maxSubstring = Math.Max(maxSubstring, windowEnd - windowStart + 1);
             }
 
 
