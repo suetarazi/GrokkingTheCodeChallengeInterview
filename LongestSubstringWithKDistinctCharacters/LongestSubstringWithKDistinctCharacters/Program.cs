@@ -35,33 +35,25 @@ namespace LongestSubstringWithKDistinctCharacters
             {
 
                 char rightChar = str[windowEnd];
-                Console.WriteLine($"Line 28: initial rightChar in for loop {rightChar}");
+
 
                 //charFrequency[rightChar] += 1;
 
                 if (!(charFrequency.ContainsKey(rightChar)))
                 {
                     charFrequency[rightChar] = 0;
-                    Console.WriteLine($"Line 45: charFrequency of rightChar {charFrequency[rightChar]}");
 
                 }
                 charFrequency[rightChar] += 1;
-                Console.WriteLine($"Line 49: charFrequency of rightChar {charFrequency[rightChar]}");
 
                 //Now try and shrink the sliding window until we have k distinct characters in the character frequency
 
                 while (charFrequency.Count > k)
                 {
                     char leftChar = str[windowStart];
-                    Console.WriteLine($"Line 56: leftChar is {leftChar}");
-                    charFrequency[leftChar] -= 1;
 
-                        //if (charFrequency.ContainsKey(leftChar))
-                        //{
-                        //}
-                        //charFrequency[leftChar] = 0;
-                    
-                    
+                    charFrequency[leftChar] -= 1;
+  
                     if(charFrequency[leftChar] == 0)
                     {
                         charFrequency.Remove(leftChar);
