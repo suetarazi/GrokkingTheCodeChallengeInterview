@@ -29,8 +29,9 @@ namespace LongestSubstringWithKDistinctCharacters
             {
 
                 char rightChar = str[windowEnd];
-                
-                //charFrequency.TryAdd(rightChar, charFrequency.GetValueOrDefault(rightChar, 0) + 1);
+
+
+                //charFrequency[rightChar] += 1;
 
                 if (!(charFrequency.ContainsKey(rightChar)))
                 {
@@ -44,15 +45,9 @@ namespace LongestSubstringWithKDistinctCharacters
                 while (charFrequency.Count > k)
                 {
                     char leftChar = str[windowStart];
-                    
-                    charFrequency[leftChar] -= 1;
 
-                        //if (charFrequency.ContainsKey(leftChar))
-                        //{
-                        //}
-                        //charFrequency[leftChar] = 0;
-                    
-                    
+                    charFrequency[leftChar] -= 1;
+  
                     if(charFrequency[leftChar] == 0)
                     {
                         charFrequency.Remove(leftChar);
@@ -61,7 +56,8 @@ namespace LongestSubstringWithKDistinctCharacters
                 }
 
                 //window size is windowEnd - windowStart +1
-                maxSubstring = Math.Max(windowStart, windowEnd - windowStart + 1);
+                maxSubstring = Math.Max(maxSubstring, windowEnd - windowStart + 1);
+                
             }
 
             return maxSubstring;
