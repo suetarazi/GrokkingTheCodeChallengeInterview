@@ -16,21 +16,23 @@ namespace NoRepeatSubstring
             int windowStart = 0;
             int maxSubstring = 1;
 
-            List<char> charList = new List<char>();
+            Dictionary<char, int> charList = new Dictionary<char, int>();
 
             //grow the window
             for(int windowEnd = 0; windowEnd < str.Length; windowEnd++)
             {
                 char rightChar = str[windowEnd];
 
-                if(charList.Contains(rightChar))
+                //if the dictionary already contains rightChar, shrink the window from windowStart so we only have ONE occurance of rightChar
+                if(charList.ContainsKey(rightChar))
                 {
-                    windowStart = rightChar;
-                }                
-                charList.Add(rightChar);
+                    windowStart = Math.Max(windowStart, charList[rightChar] + 1);
+                }
+                
+                //insert rightChar into the dictionary
+                charList[rightChar] = windowEnd;
 
-
-
+            //remember the max substring length so far
              maxSubstring = Math.Max(maxSubstring, windowEnd - windowStart + 1);
             }
 
