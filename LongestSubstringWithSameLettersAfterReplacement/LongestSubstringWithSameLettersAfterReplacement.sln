@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30611.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LongestSubstringWithSameLettersAfterReplacement", "LongestSubstringWithSameLettersAfterReplacement\LongestSubstringWithSameLettersAfterReplacement.csproj", "{42CEF901-BA98-4FEB-8A17-A812E133AC86}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XUnitTestProject1", "XUnitTestProject1\XUnitTestProject1.csproj", "{650B6C9B-0F4E-44FD-9A20-12D31EC99C8A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{42CEF901-BA98-4FEB-8A17-A812E133AC86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42CEF901-BA98-4FEB-8A17-A812E133AC86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42CEF901-BA98-4FEB-8A17-A812E133AC86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42CEF901-BA98-4FEB-8A17-A812E133AC86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{650B6C9B-0F4E-44FD-9A20-12D31EC99C8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{650B6C9B-0F4E-44FD-9A20-12D31EC99C8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{650B6C9B-0F4E-44FD-9A20-12D31EC99C8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{650B6C9B-0F4E-44FD-9A20-12D31EC99C8A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {22BA475D-4258-4178-B9CD-11D20BDF9B0C}
+	EndGlobalSection
+EndGlobal
