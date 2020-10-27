@@ -8,6 +8,9 @@
 *.suo
 *.json
 *.cache
+*.props
+*.targets
+
 
 # Created by https://www.gitignore.io/api/linux,macos,windows,visualstudio,visualstudiocode
 
